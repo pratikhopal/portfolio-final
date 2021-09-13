@@ -24,12 +24,12 @@ export default function Contact() {
       </div>
       <div className="right">
         <h2>Contact.</h2>
-        <ul>
-            <li><a href="">Linkedin</a></li>
-            <li><a href="">Github</a></li>
-            <li>Email : hopalsnap@gmail.com</li>
-            <li>Contact:8087337964</li>
-          </ul>
+        <form onSubmit={handleSubmit}>
+          <input type="text" placeholder="Email" />
+          <textarea placeholder="Message"></textarea>
+          <button type="submit">Send</button>
+          {message && <span>Thanks, I'll reply ASAP :)</span>}
+        </form>
       </div>
     </div>
   );
